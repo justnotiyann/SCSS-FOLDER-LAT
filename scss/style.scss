@@ -13,10 +13,34 @@
 
 h1 {
   color: map-get($color, primary);
-  font-weight: font-weight(regular);
-  font-style: italic;
-  font-size: 6em;
-  text-align: center;
+  font-weight: font-weight(bold);
+  margin-top: 1em;
+}
+
+nav {
+  margin-top: 1em;
+  padding: $padding;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin-right: 1.3em;
+      a {
+        transition: 0.3s;
+        &:hover {
+          color: $yellow;
+        }
+      }
+
+      i {
+        color: $yellow;
+        font-size: 2em;
+      }
+    }
+  }
 }
 
 .card {
@@ -36,10 +60,10 @@ h1 {
     align-items: center;
   }
   &-body {
-    padding: 10px;
+    padding: $padding;
   }
   &-title {
-    padding: 10px;
+    padding: $padding;
     text-align: center;
     h2 {
       color: map-get($color, primary);
@@ -47,10 +71,76 @@ h1 {
     }
   }
   &-content {
-    padding: 10px;
+    padding: $padding;
     p {
       color: grey;
       text-align: center;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  p {
+    color: rgb(130, 130, 130);
+    font-size: 1.2em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .drible {
+    border: 1px solid black;
+    box-shadow: 10px 20px rgba(0, 0, 0, 0.258);
+    width: 20em;
+    padding: 1em;
+    border-radius: 8px;
+    margin-right: 3em;
+    &-logo {
+      padding: $padding;
+      i {
+        font-size: 2em;
+        color: $yellow;
+      }
+    }
+    &-title {
+      padding: $padding;
+      text-align: center;
+      p {
+        font-size: 1.4em;
+        font-weight: map-get($font-weight, bold);
+      }
+    }
+    &-body {
+      padding: $padding;
+      p {
+        color: rgb(142, 137, 137);
+      }
+    }
+    &-link {
+      padding: $padding;
+      margin-top: 0.3 em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        background-color: rgb(128, 174, 54);
+        padding: 0.6em 1em;
+        border-radius: 8px;
+        color: white;
+        font-weight: map-get($font-weight, bold);
+        transition: 0.7s;
+        &:hover {
+          background-color: rgb(83, 108, 42);
+          color: white;
+        }
+      }
     }
   }
 }
